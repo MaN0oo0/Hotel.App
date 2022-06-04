@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.PL", "Hotel.PL\Hotel.PL.csproj", "{BD997C45-0648-4504-8202-4D529B34C9DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.BL", "Hotel.BL\Hotel.BL.csproj", "{A08CEFE5-3E0C-4984-A73E-6874880B8727}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.DAL", "Hotel.DAL\Hotel.DAL.csproj", "{691CC02A-EE2E-457B-9457-FB0D19E53957}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD997C45-0648-4504-8202-4D529B34C9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD997C45-0648-4504-8202-4D529B34C9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD997C45-0648-4504-8202-4D529B34C9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD997C45-0648-4504-8202-4D529B34C9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A08CEFE5-3E0C-4984-A73E-6874880B8727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A08CEFE5-3E0C-4984-A73E-6874880B8727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A08CEFE5-3E0C-4984-A73E-6874880B8727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A08CEFE5-3E0C-4984-A73E-6874880B8727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{691CC02A-EE2E-457B-9457-FB0D19E53957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{691CC02A-EE2E-457B-9457-FB0D19E53957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{691CC02A-EE2E-457B-9457-FB0D19E53957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{691CC02A-EE2E-457B-9457-FB0D19E53957}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA89D47F-A3D1-4CE0-BAEF-EDF2F0E39878}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,53 @@
+﻿
+@model CustomerVM
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>Welcome To Customer </h1>
+<form asp-controller="Customer" asp-action="Create" class="form-group">
+
+
+    <div asp-validation-summary="All" class="text-danger font-bold"></div>
+<label asp-for="Name">Customer Name</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger font-bold"></span>
+    <br />
+
+    
+    <label asp-for="PhoneNumber">Customer Phone</label>
+    <input type="text" class="form-control" asp-for="PhoneNumber" />
+    <span asp-validation-for="PhoneNumber" class="text-danger font-bold"></span>
+    <br />
+
+    <label asp-for="NationalNumber">NationalNumber</label>
+    <input type="number" class="form-control" asp-for="NationalNumber" />
+    <span asp-validation-for="NationalNumber" class="text-danger font-bold"></span>
+    <br />
+
+
+ 
+
+ 
+    <select class="form-control" asp-for="ReceptionId" asp-items="(SelectList)ViewBag.CustomerList">
+        <option>Choose Worker</option>
+    </select>
+    <br />
+
+    <div class="demo-checkbox">
+        <input type="checkbox" asp-for="IsActive" checked="checked">
+        <label asp-for="IsActive">IsActive</label>
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+    <center>
+      
+  <button type="submit" class="btn btn-success">Save</button>
+  <button type="reset" class="btn btn-danger">Cancel</button>
+  <a asp-action="index" asp-controller="Customer" class="btn btn-primary">Return</a>
+
+ </center>
+     </form>
+      
+@section Valdiation{
+    <script src="~/jquery-validation/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

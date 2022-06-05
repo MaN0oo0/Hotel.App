@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "OwlCarousel2@2.3.4",
+      "destination": "wwwroot/OwlCarousel2/",
+      "files": [
+        "owl.carousel.min.js",
+        "assets/owl.carousel.min.css",
+        "assets/owl.theme.green.min.css"
+      ]
+    }
+  ]
+}

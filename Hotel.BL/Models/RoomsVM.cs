@@ -5,16 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace Hotel.DAL.Entity
+using Hotel.DAL.Entity;
+
+namespace Hotel.BL.Models
 {
-    public class Rooms
+    public class RoomsVM
     {
-        [Required, Range(1, 90),Key]
-        
+        [Key]
+
         public int Id { get; set; }
 
-            [Required, MinLength(11)]
-            public int PhoneNumber { get; set; }
+        [Required]
+        public int PhoneNumber { get; set; }
 
         public int CleanerId { get; set; }
 
@@ -27,6 +29,5 @@ namespace Hotel.DAL.Entity
         public Customers? Customers { get; set; }
         public bool IsDeleted { get; set; }
         public bool IsActive { get; set; }
-
     }
 }

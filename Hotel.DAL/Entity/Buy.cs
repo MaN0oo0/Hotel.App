@@ -23,5 +23,6 @@ namespace Hotel.DAL.Entity
         [ForeignKey("FoodId")]
 
         public Food? Food { get; set; }
+
     }
 }

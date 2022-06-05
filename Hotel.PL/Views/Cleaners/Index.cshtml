@@ -1,0 +1,100 @@
+﻿
+@model IEnumerable<CleanersVM>
+@{
+    ViewData["Title"] = "Index";
+}
+<h1 class="badge rounded-pill bg-secondary p-2 mt-2">Welcome To Cleaners_Sys </h1>
+
+<style>
+    tr ,th , tbody , thead{
+        text-align:center !important;
+    }
+    
+</style>
+
+
+
+<a asp-controller="Cleaners" asp-action="Create" class="btn btn-primary w-100 mt-20px m-auto">Create New Customer</a>
+
+<br /> <br />
+
+
+<form asp-controller="Cleaners" asp-action="Index">
+    <div class="container-fluid">
+    <div class="row d-flex align-items-center">
+        <div class="col-lg-10 col-md-6 col-sm-8 col-xs-6">
+            <input type="text" class="form-control" name="SearchValue" />
+        </div>
+        
+        @*<div class="col-lg-2 col-md-4 ">
+            <input type="submit" value="search" class="btn btn-success" />
+        </div>*@
+        <div class="col-sm-4 col-lg-2 col-md-6 col-xs-6">
+       
+            <input type="submit" value="search" class="btn btn-success" />
+        </div>
+    </div>
+</div>
+</form>
+
+<br /> <br />
+<div class="row">
+            
+     <div class="our-work text-center pt-5 pb-5 ">
+
+<table class="table table-hover table-striped text-center table-bordered font-bold">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>PhoneNumber</th>
+            @*<th>Reception-Worker</th>*@
+            <th>Details</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model)
+        {
+           
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.PhoneNumber
+                </td>
+                @*<td>
+                    @item.DOB.ToShortDateString()
+                </td>
+                <td>
+                    @item.Address
+                </td>*@
+              @*  <td>
+                    @item.Reception.Name
+                </td>*@
+                <td>
+                    <a asp-controller="Cleaners" asp-action="Details" asp-route-id="@item.Id" class="btn btn-success">Details</a>
+                </td>
+                <td>
+                    <a asp-controller="Cleaners" asp-action="Update" asp-route-id="@item.Id" class="btn btn-warning">Update</a>
+                </td>
+                <td>
+                    <a asp-controller="Cleaners" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<center>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary w-100">Return</a>
+</center>
+       </div>
+
+</div>

@@ -6,22 +6,26 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Hotel.DAL.Entity
+namespace Hotel.BL.Models
 {
-    public class Cleaners
+    public class CleanersVM
     {
+        public CleanersVM()
+        {
+            IsDeleted = false;
+        }
         [Key]
         public int Id { get; set; }
 
 
 
-        [Required,MaxLength(50)]
+        [Required, MaxLength(50)]
         public string Name { get; set; }
 
-        [Required, MinLength(11)]
+        [Required]
         public string PhoneNumber { get; set; }
 
-        [Required,MinLength(3000)]
+        [Required]
         public double Salary { get; set; }
         public string Address { get; set; }
         public bool IsDeleted { get; set; }

@@ -21,6 +21,8 @@ builder.Services.AddAutoMapper(x => x.AddProfile(new DomainProfile()));
 // Add Scoped
 builder.Services.AddScoped<IReception, ReceptionRep>();
 builder.Services.AddScoped<ICustomer, CustomerRep>();
+builder.Services.AddScoped<IRooms, RoomsRep>();
+builder.Services.AddScoped<ICleaners, CleanersRep>();
 
 
 

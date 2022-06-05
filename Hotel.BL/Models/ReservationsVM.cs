@@ -5,25 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Hotel.DAL.Entity;
 
-namespace Hotel.DAL.Entity
+namespace Hotel.BL.Models
 {
-    public class Cleaners
+    public class ReservationsVM
     {
         [Key]
-        public int Id { get; set; }
+        public int RevirsationsNumber { get; set; }
 
+        public DateTime RevirsationsDate { get; set; }
 
+        public DateTime ExpiryDate { get; set; }
 
-        [Required,MaxLength(50)]
-        public string Name { get; set; }
+        public int RoomId { get; set; }
 
-        [Required, MinLength(11)]
-        public string PhoneNumber { get; set; }
+        public Rooms? Rooms { get; set; }
 
-        [Required,MinLength(3000)]
-        public double Salary { get; set; }
-        public string Address { get; set; }
+        public int CustomerId { get; set; }
+
+        [ForeignKey("CustomerId")]
+        public Customers? Customers { get; set; }
+        
         public bool IsDeleted { get; set; }
         public bool IsActive { get; set; }
         public bool IsUpdated { get; set; }

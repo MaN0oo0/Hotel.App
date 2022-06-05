@@ -14,9 +14,10 @@ namespace Hotel.BL.Models
         [Key]
 
         public int Id { get; set; }
+ 
 
         [Required]
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         public int CleanerId { get; set; }
 

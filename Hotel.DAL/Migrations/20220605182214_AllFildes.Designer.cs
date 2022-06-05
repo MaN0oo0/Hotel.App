@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotel.DAL.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220605154158_SomeFiles")]
-    partial class SomeFiles
+    [Migration("20220605182214_AllFildes")]
+    partial class AllFildes
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -299,8 +299,9 @@ namespace Hotel.DAL.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("int");
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

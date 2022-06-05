@@ -9,12 +9,12 @@ namespace Hotel.DAL.Entity
 {
     public class Rooms
     {
-        [Required, Range(1, 90),Key]
+        [Key]
         
         public int Id { get; set; }
-
+      
             [Required, MinLength(11)]
-            public int PhoneNumber { get; set; }
+            public string PhoneNumber { get; set; }
 
         public int CleanerId { get; set; }
 

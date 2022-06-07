@@ -32,10 +32,10 @@ namespace Hotel.BL.Mapper
             CreateMap<CleanersVM, Cleaners>();
 
             //From Entity To VM (GetData())
-            CreateMap<Customers, ReservationsVM>();
-            CreateMap<Rooms, ReservationsVM>();
+            CreateMap<Revirsations, ReservationsVM>();
             //Form VM To Entity (Create -Edite-Delete) 
             CreateMap<ReservationsVM, Revirsations>();
+
         }
     }
 }

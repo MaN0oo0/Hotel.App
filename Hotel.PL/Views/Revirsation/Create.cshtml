@@ -1,0 +1,55 @@
+﻿
+@model ReservationsVM
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>Welcome To Revirsations </h1>
+<form asp-controller="Revirsation" asp-action="Create" class="form-group">
+
+
+    <div asp-validation-summary="All" class="text-danger font-bold"></div>
+    @*<input type="text"  asp-for="RevirsationsNumber" readonly/>*@
+    <label asp-for="RevirsationsDate">RevirsationsDate</label>
+    <input type="date" class="form-control" asp-for="RevirsationsDate" />
+    <span asp-validation-for="RevirsationsDate" class="text-danger font-bold"></span>
+    <br />
+
+    
+    <label asp-for="ExpiryDate">ExpiryDate</label>
+    <input type="date" class="form-control" asp-for="ExpiryDate" />
+    <span asp-validation-for="ExpiryDate" class="text-danger font-bold"></span>
+    <br />
+
+  
+ 
+
+  <label asp-for="RoomId">RoomNumber</label>
+    <select class="form-control" asp-for="RoomId" asp-items="(SelectList)ViewBag.RoomsList">
+        <option>Choose Worker</option>
+    </select>
+    <span asp-validation-for="RoomId" class="text-danger font-bold"></span>
+    <br />    
+      <label asp-for="CustomerId">CustomerName</label>
+    <select class="form-control" asp-for="CustomerId" asp-items="(SelectList)ViewBag.CustomerList">
+        <option>Choose Worker</option>
+    </select>
+    <br />
+
+    <div class="demo-checkbox">
+        <input type="checkbox" asp-for="IsActive" checked="checked">
+        <label asp-for="IsActive">IsActive</label>
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+    <center>
+      
+  <button type="submit" class="btn btn-success">Save</button>
+  <button type="reset" class="btn btn-danger">Cancel</button>
+  <a asp-action="index" asp-controller="Revirsation" class="btn btn-primary">Return</a>
+
+ </center>
+     </form>
+      
+@section Valdiation{
+    <script src="~/jquery-validation/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

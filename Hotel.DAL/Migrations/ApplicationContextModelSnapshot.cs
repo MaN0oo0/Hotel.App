@@ -42,7 +42,7 @@ namespace Hotel.DAL.Migrations
 
                     b.HasIndex("FoodId");
 
-                    b.ToTable("Buys");
+                    b.ToTable("Buys", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.DAL.Entity.Cleaners", b =>
@@ -89,7 +89,7 @@ namespace Hotel.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cleaners");
+                    b.ToTable("Cleaners", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.DAL.Entity.Customers", b =>
@@ -136,7 +136,7 @@ namespace Hotel.DAL.Migrations
 
                     b.HasIndex("ReceptionId");
 
-                    b.ToTable("Customer");
+                    b.ToTable("Customer", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.DAL.Entity.Food", b =>
@@ -175,7 +175,7 @@ namespace Hotel.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Foods");
+                    b.ToTable("Foods", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.DAL.Entity.Reception", b =>
@@ -224,7 +224,7 @@ namespace Hotel.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Reception");
+                    b.ToTable("Reception", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.DAL.Entity.Revirsations", b =>
@@ -274,7 +274,7 @@ namespace Hotel.DAL.Migrations
 
                     b.HasIndex("RoomsId");
 
-                    b.ToTable("Revirsations");
+                    b.ToTable("Revirsations", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.DAL.Entity.Rooms", b =>
@@ -307,7 +307,7 @@ namespace Hotel.DAL.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Rooms");
+                    b.ToTable("Rooms", (string)null);
                 });
 
             modelBuilder.Entity("Hotel.DAL.Entity.Buy", b =>

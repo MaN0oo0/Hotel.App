@@ -14,7 +14,7 @@
 
 
 
-<a asp-controller="Customer" asp-action="Create" class="btn btn-primary w-100 mt-20px m-auto">Create New Customer</a>
+<a asp-controller="Revirsation" asp-action="Create" class="btn btn-primary w-100 mt-20px m-auto">Create New Customer</a>
 
 <br /> <br />
 
@@ -45,7 +45,7 @@
 <table class="table table-hover table-striped text-center table-bordered font-bold">
     <thead>
         <tr>
-            <th>Reservation-Number</th>
+            <th>Room-Number</th>
             <th>Reservation-date</th>
             <th>Exp-Date</th>
             @*<th>Reception-Worker</th>*@
@@ -61,13 +61,16 @@
            
             <tr>
                 <td>
+                    @item.Rooms.Id
+                </td>
+                @*<td>
                     @item.RevirsationsNumber
+                </td>*@
+                <td>
+                    @item.RevirsationsDate.ToShortDateString()
                 </td>
                 <td>
-                    @item.RevirsationsDate
-                </td>
-                <td>
-                    @item.ExpiryDate
+                    @item.ExpiryDate.ToShortDateString()
                 </td>
                 @*<td>
                     @item.DOB.ToShortDateString()
@@ -93,7 +96,7 @@
 
 </table>
 <center>
-    <a asp-controller="Revirsation" asp-action="Index" class="btn btn-primary w-100">Return</a>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary w-100">Return</a>
 </center>
        </div>
 

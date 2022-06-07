@@ -21,6 +21,7 @@ namespace Hotel.DAL.database
         public DbSet<Food> Foods { get; set; }
         public DbSet<Revirsations> Revirsations { get; set; }
         public DbSet<Rooms> Rooms { get; set; }
+      
 
     }
 }

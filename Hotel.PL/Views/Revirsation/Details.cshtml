@@ -1,0 +1,75 @@
+﻿
+@model ReservationsVM
+@{
+    ViewData["Title"] = "Details";
+}
+  <h2>Details for RevirsationsNumber  : @Model.RevirsationsNumber  </h2>
+<form asp-controller="Customer" asp-action="Details" class="form-group">
+
+
+
+
+
+    <input type="hidden" asp-for="RevirsationsNumber" />
+
+   
+   
+
+  <label asp-for="RevirsationsDate">RevirsationsDate</label>
+    <input type="date" class="form-control" asp-for="RevirsationsDate" />
+    <span asp-validation-for="RevirsationsDate" class="text-danger font-bold"></span>
+    <br />
+
+    
+    <label asp-for="ExpiryDate">ExpiryDate</label>
+    <input type="date" class="form-control" asp-for="ExpiryDate" />
+    <span asp-validation-for="ExpiryDate" class="text-danger font-bold"></span>
+    <br />
+
+  
+ 
+
+  <label asp-for="RoomId">RoomNumber</label>
+    <select class="form-control" asp-for="RoomId" asp-items="(SelectList)ViewBag.RoomsList">
+        <option>Choose Worker</option>
+    </select>
+    <span asp-validation-for="RoomId" class="text-danger font-bold"></span>
+    <br />    
+      <label asp-for="CustomerId">CustomerName</label>
+    <select class="form-control" asp-for="CustomerId" asp-items="(SelectList)ViewBag.CustomerList">
+        <option>Choose Worker</option>
+    </select>
+    <br />
+   
+        <label asp-for="CreationDate">CreationDate</label>
+    <input type="text" class="form-control" asp-for="CreationDate" readonly />
+    <br />
+    <label asp-for="UpdateDate">UpdateDate</label>
+    <input type="text" class="form-control" asp-for="UpdateDate" readonly />
+    <br />
+        <label asp-for="DeleteDate">DeleteDate</label>
+    <input type="text" class="form-control" asp-for="DeleteDate" readonly />
+    <br />
+
+ 
+
+
+
+
+    
+    <div class="demo-checkbox">
+        <input type="checkbox" asp-for="IsActive" checked="checked">
+        <label asp-for="IsActive">IsActive</label>
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+
+    <center>
+      
+  <button type="submit" class="btn btn-danger">Delete</button>
+  <a asp-controller="Revirsation" asp-action="Update" class="btn btn-warning"  asp-route-id="@Model.RevirsationsNumber" >Update</a>
+ 
+  <a asp-action="index" asp-controller="Revirsation" class="btn btn-primary">Return</a>
+
+ </center>
+     </form>
+      

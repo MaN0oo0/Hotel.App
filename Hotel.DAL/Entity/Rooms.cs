@@ -12,9 +12,10 @@ namespace Hotel.DAL.Entity
         [Key]
         
         public int Id { get; set; }
-      
-            [Required, MinLength(11)]
-            public string PhoneNumber { get; set; }
+
+
+        [Required, MinLength(11)]
+        public string PhoneNumber { get; set; }
 
         public int CleanerId { get; set; }
 

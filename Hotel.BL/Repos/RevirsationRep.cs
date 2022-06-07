@@ -25,7 +25,7 @@ namespace Hotel.BL.Repos
             await db.Revirsations.AddAsync(obj);
             await db.SaveChangesAsync();
             //obj.CreationDate = DateTime.Now;
-           // obj.RevirsationsDate = DateTime.Now;
+         // obj.RevirsationsDate = DateTime.Now;
         }
 
         public async Task DeleteAsync(int id)

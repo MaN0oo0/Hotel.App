@@ -1,0 +1,54 @@
+﻿
+@model RoomsVM
+@{
+    ViewData["Title"] = "Details";
+}
+  <h2>Details RoomNumber  : @Model.Id  </h2>
+<form asp-controller="Customer" asp-action="Details" class="form-group">
+
+
+
+
+        <label asp-for="Id">RoomNumber</label>
+    <input type="text" asp-for="Id"  class="form-control"  readonly/>
+
+   
+   
+
+
+    <label asp-for="PhoneNumber">PhoneNumber</label>
+    <input type="text" class="form-control" asp-for="PhoneNumber" readonly />
+    <br />
+
+
+
+ 
+
+     <label asp-for="CustomerId">Customer</label>
+     <select class="form-control" asp-for="CustomerId" asp-items="(SelectList)ViewBag.CustomerList" readonly>
+    </select>
+    <br /> 
+
+     <label asp-for="CleanerId">Cleaner</label>
+     <select class="form-control" asp-for="CleanerId" asp-items="(SelectList)ViewBag.CleanerList" readonly>
+    </select>
+    <br />
+
+
+    
+    <div class="demo-checkbox">
+        <input type="checkbox" asp-for="IsActive" checked="checked">
+        <label asp-for="IsActive">IsActive</label>
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+
+    <center>
+      
+  <button type="submit" class="btn btn-danger">Delete</button>
+  <a asp-controller="Rooms" asp-action="Update" class="btn btn-warning"  asp-route-id="@Model.Id" >Update</a>
+ 
+  <a asp-action="index" asp-controller="Rooms" class="btn btn-primary">Return</a>
+
+ </center>
+     </form>
+      

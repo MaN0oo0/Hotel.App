@@ -1,4 +1,5 @@
-﻿using Hotel.BL.Interface;
+﻿using AutoMapper;
+using Hotel.BL.Interface;
 using Hotel.DAL.database;
 using Hotel.DAL.Entity;
 using Microsoft.EntityFrameworkCore;
@@ -11,18 +12,21 @@ using System.Threading.Tasks;
 
 namespace Hotel.BL.Repos
 {
-    public class CustomerRep:ICustomer
+    public class CustomerRep: ICustomer
     {
         private readonly ApplicationContext db;
+        
         public CustomerRep(ApplicationContext db)
         {
             this.db = db;
+           
         }
 
         public async Task CreateAsync(Customers obj)
         {
 
             await db.Customers.AddAsync(obj);
+     
             await db.SaveChangesAsync();
         }
 
@@ -40,7 +44,8 @@ namespace Hotel.BL.Repos
                 return
                     await db.Customers.Where(filter).Include("Reception").ToListAsync();
             else
-                return
+              
+            return
                      await db.Customers.ToListAsync();
         }
 

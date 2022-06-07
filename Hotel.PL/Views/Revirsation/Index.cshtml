@@ -1,8 +1,9 @@
-﻿@model IEnumerable<RoomsVM>
+﻿
+@model IEnumerable<ReservationsVM>
 @{
     ViewData["Title"] = "Index";
 }
-<h1 class="badge rounded-pill bg-secondary p-2 mt-2">Welcome To Rooms_Sys </h1>
+<h1 class="badge rounded-pill bg-secondary p-2 mt-2">Welcome To Reservations </h1>
 
 <style>
     tr ,th , tbody , thead{
@@ -13,12 +14,12 @@
 
 
 
-<a asp-controller="Rooms" asp-action="Create" class="btn btn-primary w-100 mt-20px m-auto">Create Rooms</a>
+<a asp-controller="Customer" asp-action="Create" class="btn btn-primary w-100 mt-20px m-auto">Create New Customer</a>
 
 <br /> <br />
 
 
-<form asp-controller="Rooms" asp-action="Index">
+<form asp-controller="Customer" asp-action="Index">
     <div class="container-fluid">
     <div class="row d-flex align-items-center">
         <div class="col-lg-10 col-md-6 col-sm-8 col-xs-6">
@@ -44,9 +45,9 @@
 <table class="table table-hover table-striped text-center table-bordered font-bold">
     <thead>
         <tr>
-            <th>RoomNumber</th>
-            <th>PhoneNumber</th>
-            <th>CustomerName</th>
+            <th>Reservation-Number</th>
+            <th>Reservation-date</th>
+            <th>Exp-Date</th>
             @*<th>Reception-Worker</th>*@
             <th>Details</th>
             <th>Update</th>
@@ -60,13 +61,13 @@
            
             <tr>
                 <td>
-                    @item.Id
+                    @item.RevirsationsNumber
                 </td>
                 <td>
-                    @item.PhoneNumber
+                    @item.RevirsationsDate
                 </td>
                 <td>
-                    @item.Customers.Name
+                    @item.ExpiryDate
                 </td>
                 @*<td>
                     @item.DOB.ToShortDateString()
@@ -78,13 +79,13 @@
                     @item.Reception.Name
                 </td>*@
                 <td>
-                    <a asp-controller="Rooms" asp-action="Details" asp-route-id="@item.Id" class="btn btn-success">Details</a>
+                    <a asp-controller="Revirsation" asp-action="Details" asp-route-id="@item.RevirsationsNumber" class="btn btn-success">Details</a>
                 </td>
                 <td>
-                    <a asp-controller="Rooms" asp-action="Update" asp-route-id="@item.Id" class="btn btn-warning">Update</a>
+                    <a asp-controller="Revirsation" asp-action="Update" asp-route-id="@item.RevirsationsNumber" class="btn btn-warning">Update</a>
                 </td>
                 <td>
-                    <a asp-controller="Rooms" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    <a asp-controller="Revirsation" asp-action="Delete" asp-route-id="@item.RevirsationsNumber" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }
@@ -92,7 +93,7 @@
 
 </table>
 <center>
-    <a asp-controller="Home" asp-action="Index" class="btn btn-primary w-100">Return</a>
+    <a asp-controller="Revirsation" asp-action="Index" class="btn btn-primary w-100">Return</a>
 </center>
        </div>
 

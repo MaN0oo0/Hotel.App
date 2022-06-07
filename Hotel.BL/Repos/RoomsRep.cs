@@ -37,7 +37,7 @@ namespace Hotel.BL.Repos
         {
             if (filter != null)
                 return
-                    await db.Rooms.Where(filter).Include("Cleaners").ToListAsync();
+                    await db.Rooms.Where(filter).Include("Cleaners").Include("Customers").ToListAsync();
             else
                 return
                      await db.Rooms.ToListAsync();
@@ -46,13 +46,13 @@ namespace Hotel.BL.Repos
 
         public async Task<Rooms> GetByIdAsync(Expression<Func<Rooms, bool>> filter)
         {
-            var data = await db.Rooms.Where(filter).Include("Cleaners").FirstOrDefaultAsync();
+            var data = await db.Rooms.Where(filter).Include("Cleaners").Include("Customers").FirstOrDefaultAsync();
             return data;
         }
 
         public async Task<IEnumerable<Rooms>> SearchAsync(Expression<Func<Rooms, bool>> filter = null)
         {
-            var data = await db.Rooms.Where(filter).Include("Cleaners").ToListAsync();
+            var data = await db.Rooms.Where(filter).Include("Cleaners").Include("Customers").ToListAsync();
             return data;
         }
 

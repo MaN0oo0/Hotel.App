@@ -23,6 +23,7 @@ builder.Services.AddScoped<IReception, ReceptionRep>();
 builder.Services.AddScoped<ICustomer, CustomerRep>();
 builder.Services.AddScoped<IRooms, RoomsRep>();
 builder.Services.AddScoped<ICleaners, CleanersRep>();
+builder.Services.AddScoped<IRevirsations, RevirsationRep>();
 
 
 

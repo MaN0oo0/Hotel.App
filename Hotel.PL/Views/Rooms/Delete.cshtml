@@ -1,0 +1,49 @@
+﻿
+@model RoomsVM
+@{
+    ViewData["Title"] = "Delete";
+}
+  <h2>Are you sure to delete Room Number : @Model.Id  </h2>
+<form asp-controller="Rooms" asp-action="Delete" class="form-group">
+
+
+
+
+         <label asp-for="Id">RoomNumber</label>
+    <input type="text" asp-for="Id" readonly class="form-control" />
+
+   <br />
+   
+
+    <label asp-for="PhoneNumber">PhoneNumber</label>
+    <input type="text" class="form-control" asp-for="PhoneNumber" readonly />
+    <br />
+
+   
+
+
+ 
+
+     <label asp-for="CustomerId">Customer</label>
+     <select class="form-control" asp-for="CustomerId" asp-items="(SelectList)ViewBag.CustomerList">
+    </select>
+    <br />
+     
+
+     <label asp-for="CleanerId">Cleaner</label>
+     <select class="form-control" asp-for="CleanerId" asp-items="(SelectList)ViewBag.CleanerList">
+    </select>
+    <br />
+
+
+
+
+    <center>
+      
+  <button type="submit" class="btn btn-danger">Delete</button>
+  <button asp-action="Update" asp-controller="Rooms" class="btn btn-warning" asp-route-id="@Model.Id" >Update</button>
+  <a asp-action="index" asp-controller="Rooms" class="btn btn-primary">Return</a>
+
+ </center>
+     </form>
+      

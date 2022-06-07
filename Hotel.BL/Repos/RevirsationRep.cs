@@ -24,6 +24,8 @@ namespace Hotel.BL.Repos
         {
             await db.Revirsations.AddAsync(obj);
             await db.SaveChangesAsync();
+            //obj.CreationDate = DateTime.Now;
+           // obj.RevirsationsDate = DateTime.Now;
         }
 
         public async Task DeleteAsync(int id)
@@ -40,7 +42,7 @@ namespace Hotel.BL.Repos
             if (filter!=null)
             {
                 return
-                    await db.Revirsations.Where(filter).Include("Rooms").ToListAsync();
+                    await db.Revirsations.Where(filter).Include("Rooms").Include("Customers").ToListAsync();
             }
             else
             {
@@ -51,13 +53,13 @@ namespace Hotel.BL.Repos
 
         public async Task<Revirsations> GetByIdAsync(Expression<Func<Revirsations, bool>> filter = null)
         {
-            var data = await db.Revirsations.Where(filter).Include("Rooms").FirstOrDefaultAsync();
+            var data = await db.Revirsations.Where(filter).Include("Rooms").Include("Customers").FirstOrDefaultAsync();
             return data;
         }
 
         public async Task<IEnumerable<Revirsations>> SearchAsync(Expression<Func<Revirsations, bool>> filter = null)
         {
-            var data = await db.Revirsations.Where(filter).Include("Rooms").ToListAsync();
+            var data = await db.Revirsations.Where(filter).Include("Rooms").Include("Customers").ToListAsync();
             return data;
         }
 

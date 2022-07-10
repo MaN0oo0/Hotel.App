@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
+
+body{
+	font-family:  'Nunito', sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family:  'Nunito', sans-serif ;
+}
+h1, h2, h3{
+	font-size: 1.65rem;
+}
+.font-weight-semibold {
+    font-weight: 700 !important;
+}
+.horizontalMenu>.horizontalMenu-list>li>a {
+    font-weight: 700;
+}
+.horizontalMenu>.horizontalMenu-list>li>a.active {
+    font-weight: 700;
+}
+.header-brand-img.dark-version{
+	display:none;
+}

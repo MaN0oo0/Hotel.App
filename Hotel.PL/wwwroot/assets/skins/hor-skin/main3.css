@@ -1,0 +1,12 @@
+body{
+	background: #f3f6fd;
+}
+.card{
+	box-shadow:none !important;
+}
+.app-sidebar {
+	box-shadow:none !important;
+}
+.header-brand-img.dark-version{
+	display:none;
+}

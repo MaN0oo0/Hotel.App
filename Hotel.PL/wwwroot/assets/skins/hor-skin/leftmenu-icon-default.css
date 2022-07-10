@@ -1,0 +1,14 @@
+body {
+    color: #23272b;
+    background: #f3f6fd;
+}
+
+.header-brand-img.dark-version{
+	display:none;
+}
+.header-brand-img.mobile.dark-view{
+	display:none;
+}
+.header-brand-img.dark-view {
+	display:none;
+}

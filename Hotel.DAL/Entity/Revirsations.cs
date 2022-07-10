@@ -1,23 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿
 
-namespace Hotel.DAL.Entity
+namespace Hotel.BL.Models
 {
     public class Revirsations
     {
+   
         [Key]
+      
         public int RevirsationsNumber { get; set; }
 
-        public DateTime RevirsationsDate { get; set;}
+        public DateTime RevirsationsDate { get; set; }
 
-        public DateTime ExpiryDate { get; set;}
+        public DateTime ExpiryDate { get; set; }
 
+      
         public int RoomId { get; set; }
+
         [ForeignKey("RoomId")]
         public Rooms? Rooms { get; set; }
 
@@ -25,6 +23,7 @@ namespace Hotel.DAL.Entity
 
         [ForeignKey("CustomerId")]
         public Customers? Customers { get; set; }
+        
         public bool IsDeleted { get; set; }
         public bool IsActive { get; set; }
         public bool IsUpdated { get; set; }

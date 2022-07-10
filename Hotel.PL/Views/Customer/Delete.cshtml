@@ -2,6 +2,7 @@
 @model CustomerVM
 @{
     ViewData["Title"] = "Delete";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
 }
   <h2>Are you sure to delete Delete : @Model.Name  </h2>
 <form asp-controller="Customer" asp-action="Delete" class="form-group">

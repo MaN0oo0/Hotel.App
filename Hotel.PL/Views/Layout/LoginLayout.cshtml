@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+    <!-- Meta data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta content="Aronox – Admin Bootstrap4 Responsive Webapp Dashboard Templat" name="description">
+    <meta content="Spruko Technologies Private Limited" name="author">
+    <meta name="keywords" content="admin site template, html admin template,responsive admin template, admin panel template, bootstrap admin panel template, admin template, admin panel template, bootstrap simple admin template premium, simple bootstrap admin template, best bootstrap admin template, simple bootstrap admin template, admin panel template,responsive admin template, bootstrap simple admin template premium" />
+
+    <!-- Title -->
+    <title>@ViewData["Title"]</title>
+
+    <!--Favicon -->
+    <link rel="icon" href="~/assets/images/brand/favicon.ico" type="image/x-icon" />
+
+    <!-- Style css -->
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+
+    <!---Icons css-->
+    <link href="~/assets/plugins/iconfonts/icons.css" rel="stylesheet" />
+    <link href="~/assets/plugins/iconfonts/font-awesome/font-awesome.min.css" rel="stylesheet">
+    <link href="~/assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+
+    <!-- Skin css-->
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="~/assets/skins/hor-skin/horizontal-default.css" />
+    <link rel="stylesheet" href="~/assets/skins/demo.css" />
+
+</head>
+<body class="h-100vh">
+    <div class="page">
+        <div class="page-single construction-body">
+            <div class="container text-center single-page single-pageimage ">
+                <div class="row">
+
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Jquery js-->
+    <script src="~/assets/js/vendors/jquery-3.4.0.min.js"></script>
+
+    <!-- Bootstrap4 js-->
+    <script src="~/assets/plugins/bootstrap/popper.min.js"></script>
+    <script src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Othercharts js-->
+    <script src="~/assets/plugins/othercharts/jquery.sparkline.min.js"></script>
+
+    <!-- Circle-progress js-->
+    <script src="~/assets/js/vendors/circle-progress.min.js"></script>
+
+    <!-- Jquery-rating js-->
+    <script src="~/assets/plugins/rating/jquery.rating-stars.js"></script>
+  
+        <script src="~/jquery-validation/jquery.validate.js"></script>
+        <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+   
+
+    @RenderSection("CustomSecript", false)
+    @RenderSection("valid", false)
+</body>
+</html>

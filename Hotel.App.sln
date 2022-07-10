@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.PL", "Hotel.PL\Hotel.PL.csproj", "{BD997C45-0648-4504-8202-4D529B34C9DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.PL", "Hotel.PL\Hotel.PL.csproj", "{BD997C45-0648-4504-8202-4D529B34C9DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.BL", "Hotel.BL\Hotel.BL.csproj", "{A08CEFE5-3E0C-4984-A73E-6874880B8727}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.BL", "Hotel.BL\Hotel.BL.csproj", "{A08CEFE5-3E0C-4984-A73E-6874880B8727}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.DAL", "Hotel.DAL\Hotel.DAL.csproj", "{691CC02A-EE2E-457B-9457-FB0D19E53957}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.DAL", "Hotel.DAL\Hotel.DAL.csproj", "{691CC02A-EE2E-457B-9457-FB0D19E53957}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A68D6174-733E-4BF8-848A-D2D416FBE8C2}"
+	ProjectSection(SolutionItems) = preProject
+		GlobelUsings.cs = GlobelUsings.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

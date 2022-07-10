@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Layout/LoginLayout.cshtml";
+}
+@model Login
+<img src="../assets/images/brand/logo.png" class="header-brand-img mobile-view mb-4" alt="Aronox logo">
+<img src="../assets/images/brand/logo-dark.png" class="header-brand-img mobile dark-view mb-4" alt="Aronox logo">
+<div class="col-xl-7 col-lg-6 col-md-12">
+    <img src="../assets/images/svgs/login.svg" class="construction-img mb-7 h-480  mt-5 mt-xl-0" alt="">
+</div>
+<div class="col-xl-5  col-lg-6 col-md-12 ">
+    <div class="col-lg-11">
+        <img src="../assets/images/brand/logo.png" class="header-brand-img light-view mb-4" alt="Aronox logo">
+        <img src="../assets/images/brand/logo-dark.png" class="header-brand-img dark-view mb-4" alt="Aronox logo">
+        <div class="wrapper wrapper2">
+
+            <form id="login" class="card-body" tabindex="500" asp-controller="Account" asp-action="Login" method="post">
+                <div asp-validation-summary="All" class="text-danger font-bold"></div>
+                <h2 class="mb-1 font-weight-semibold">Login</h2>
+                <p class="mb-6">Sign In to your account</p>
+
+                <div class="input-group mb-3" id="data">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="Email" asp-for="Email">
+                </div>
+                    <span asp-validation-for="Email" class="mt-3"></span>
+               
+                <div id="div">
+                    <input type="button" class="btn btn-primary" id="btn" value="Sign With Email">
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="input-group mb-4">
+                    <span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" asp-for="Password">
+
+                </div>
+                <span asp-validation-for="Password"></span>
+                <div class="d-flex justify-content-center align-items-md-center" style="display:flex;justify-content:center;align-items:center;width:250px;height:0px;margin:20px auto;">
+
+                    <label asp-for="RemmberMe">Remmber Me</label>
+                    <input type="checkbox" asp-for="RemmberMe">
+                </div>
+
+                <div class="row mb-0">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </div>
+                    <div class="col-12 mb-0">
+                        <a asp-controller="Account" asp-action="ForgetPassword" class="btn btn-link box-shadow-0 px-0">Forgot password?</a>
+                        <p class=" mb-0">Don't have account?<a asp-controller="Account" asp-action="Regiestr" class="text-primary ml-1">Sign UP</a></p>
+                    </div>
+                </div>
+            </form>
+            <div class="card-body social-icons border-top">
+                <a class="btn  btn-social btn-fb mr-2"><i class="fa fa-facebook"></i> </a>
+                <a class="btn  btn-social btn-googleplus mr-2"><i class="fa fa-google-plus"></i></a>
+                <a class="btn  btn-social btn-twitter-transparant  "><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+@*@section CustomSecript{
+    <script defer>
+        var x = document.getElementById("data");
+        var Btn = document.getElementById("btn");
+        const c = document.getElementById("div");
+           Btn.addEventListener("click",  function () {
+            x.innerHTML = `
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Email" asp-for="Email"  asp-for="Email">
+
+                                <span asp-validation-for="Email" class="mt-3></span>`;
+
+            c.innerHTML = ` <input type="button" class="btn btn-primary" id="btnName" value="Sign With Name">`
+           
+        });
+
+       
+        
+
+    </script>*@
+
+}

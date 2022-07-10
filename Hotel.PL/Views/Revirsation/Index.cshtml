@@ -2,6 +2,7 @@
 @model IEnumerable<ReservationsVM>
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
 }
 <h1 class="badge rounded-pill bg-secondary p-2 mt-2">Welcome To Reservations </h1>
 
@@ -19,7 +20,7 @@
 <br /> <br />
 
 
-<form asp-controller="Customer" asp-action="Index">
+<form asp-controller="Revirsation" asp-action="Index">
     <div class="container-fluid">
     <div class="row d-flex align-items-center">
         <div class="col-lg-10 col-md-6 col-sm-8 col-xs-6">

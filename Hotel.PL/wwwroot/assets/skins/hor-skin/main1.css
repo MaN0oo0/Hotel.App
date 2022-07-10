@@ -1,0 +1,10 @@
+body{
+	background: #f3f6fd;
+}
+.card{
+	box-shadow: 0 0 0 0 rgba(111, 134, 230, 0.13), 0 4px 16px 0 rgba(179, 187, 195, 0.36);
+    border: solid 1px #dde4eb;
+}
+.header-brand-img.dark-version{
+	display:none;
+}

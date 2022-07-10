@@ -1,0 +1,99 @@
+@media (min-width: 992px) {
+	
+	.horizontal-main{
+		border-bottom: 0;
+	}
+}
+.horizontalMenu>.horizontalMenu-list>li>a{
+	border: 1px solid rgba(67, 87, 133, .2);
+	margin:2px;
+	border-radius:3px;
+}
+.hor-menu .horizontalMenu>.horizontalMenu-list>li>a {
+	padding: 0.6rem 1.5rem 0.6rem;
+}
+@media (max-width: 992px) {
+	.horizontalMenu>.horizontalMenu-list>li{
+		border-bottom:0
+	}
+}
+
+/* Combination side bar */
+.app.sidebar-mini .comb-sidebar .side-menu__item{
+	padding: 8px 19px 8px 34px;
+}
+.app.sidebar-mini .app-header.comb-header{
+	border-bottom:0;
+}
+@media (min-width: 992px){
+	.app.sidebar-mini .horizontalMenu>.horizontalMenu-list>li:first-child>a{
+		margin-left: 5px;
+		border-left: 1px solid rgba(67, 87, 133, .2);
+	}
+	.app.sidebar-mini.sidenav-toggled .horizontalMenu>.horizontalMenu-list>li:first-child>a{
+		margin-left:0;
+	}
+	.app-sidebar.comb-sidebar{
+		border-radius:3px;
+		margin-top: 4.8rem;
+		margin-left: 5px;
+		width: 225px;
+	}
+}
+.app.sidebar-mini .app-header {
+    border-bottom: 1px solid rgba(67, 87, 133, .2) !important;
+}
+.horizontalMenu>.horizontalMenu-list>li>ul.sub-menu {
+    position: absolute;
+    top: 54px;
+    z-index: 1000;
+    margin: 0px;
+    padding: 5px;
+    min-width: 190px;
+    background-color: #fff;
+    border: 1px solid rgba(67, 87, 133, .2);
+}
+.horizontalMenu>.horizontalMenu-list>li>.horizontal-megamenu {
+    width: 100%;
+    left: 0px;
+    position: absolute;
+    top: 56px;
+    color: #6b6f80;
+    z-index: 1000;
+    margin: 0px;
+    text-align: left;
+    font-size: 15px;
+}
+.app-sidebar.comb-sidebar {
+    border-radius: 3px; 
+    margin-top: 4.7rem; 
+    margin-left: 5px; 
+    width: 225px;
+}
+.header-brand-img.dark-version{
+	display:none;
+}
+@media (max-width: 991px){
+	.horizontalMenu>.horizontalMenu-list>li>ul.sub-menu {
+		min-width: 100%;
+	}
+	.mega-menubg {
+		box-shadow: none !important;
+		border: 0 !important;
+		padding: 0 !important;
+		background: rgb(255,255,255) !important;
+		min-width: 100%;
+	}
+	.horizontalMenu>.horizontalMenu-list>li>.horizontal-megamenu .link-list li a {
+		line-height: 18px;
+		border-right: none;
+		text-align: left;
+		padding: 6px 0px;
+		background: rgb(255,255,255) !important;
+		
+		color: #031938;
+		border-right: 0 none;
+		display: block;
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,468 @@
+/* Color Swicher CSS */
+
+.switcher {
+    width: 30px !important;
+    height: 40px !important;
+    display: inline-block;
+    margin: 4px 8px;
+    border-radius: 5px;
+    border: 0px solid #000;
+}
+.swichermainleft {
+  width: 100%;
+  float: left;
+}
+.wscolorcode {
+    display: inline-block;
+    margin: 3px;
+}
+.skin-body{
+	margin: 0.8rem 0 0.8rem 0;
+}
+.navstyle1{
+	border: 1px solid rgba(67, 87, 133, .2);
+    padding: 0.2rem 1rem 0.2rem;
+	border-radius:3px;
+}
+.navstyle1:hover{
+	color:#031938;
+	cursor: pointer;
+}
+.navstyle1:focus, .navstyle1.active{
+	border: 1px solid #4a32d4;
+    padding: 0.2rem 1rem 0.2rem;
+	border-radius:3px;
+	cursor: pointer;
+	box-shadow: 0 20px 20px -10px rgba(39, 39, 41, 0.1), 0px 5px 10px 0px rgba(74, 50, 212,0.1);
+}
+/*-- color-1 --*/
+.color1{
+	background: #653298 !important;
+}
+
+/*-- color-2 --*/
+.color2{
+	background: #545353 !important;
+}
+
+/*-- color-3 --*/
+.color3{
+	background: #526273 !important;
+}
+
+/*-- color-4 --*/
+.color4{
+	background: #3546b1 !important;
+}
+
+/*-- color-5 --*/
+.color5{
+	background: #5b5572 !important;
+}
+
+/*-- color-6 --*/
+.color6{
+	background: #006666 !important;
+}
+
+/*-- color-7 --*/
+.color7{
+	background: #723696 !important;
+}
+
+/*-- color-8 --*/
+.color8{
+	background: #145388 !important;
+}
+
+/*-- color-9 --*/
+.color9{
+	background: #770467 !important;
+}
+
+/*-- color-10 --*/
+.color10{
+	background: #576a3d !important;
+}
+
+/*-- color-11 --*/
+.color11{
+	background: linear-gradient(to right, #3446b3, #8925b5) !important;
+}
+
+/*-- color-12 --*/
+.color12{
+	background: linear-gradient(to right, #203A43, #226c8c) !important;
+}
+
+/*-- color-13 --*/
+.color13{
+	background: linear-gradient(to right, #302856, #6c6882) !important;
+}
+
+/*-- color-14 --*/
+.color14{
+	background: linear-gradient(to right, #0b4039, #038878) !important;
+}
+
+/*-- color-15 --*/
+.color15{
+	background: linear-gradient(to right,#141761, #4248ca) !important;
+}
+
+/*-- color-16 --*/
+.color16{
+	background:linear-gradient(to right, #4c1f86, #815eae) !important;
+}
+
+/*-- color-17 --*/
+.color17{
+	background: linear-gradient(to right, #3838af, #0c86ce)  !important;
+}
+
+/*-- color-18 --*/
+.color18{
+	background: linear-gradient(to right, #4c4177 ,#2a5470 ) !important;
+}
+
+/*-- color-19 --*/
+.color19{
+	background: linear-gradient(to right, #4f055f, #980fb5) !important;
+}
+
+/*-- color-20 --*/
+.color20{
+	background: linear-gradient(to right, #3d2a90, #770467) !important;
+}
+
+/*-- image-1 --*/
+.image1{
+	background:url(../../assets/images/backgrounds/13.png);
+}
+
+/*-- image-2 --*/
+.image2{
+	background:url(../../assets/images/backgrounds/14.png);
+}
+
+/*-- image-3 --*/
+.image3{
+	background:url(../../assets/images/backgrounds/15.png);
+}
+
+/*-- image-4 --*/
+.image4{
+	background:url(../../assets/images/backgrounds/16.png);
+}
+
+/*-- image-5 --*/
+.image5{
+	background:url(../../assets/images/backgrounds/17.png);
+}
+
+/*-- image-6 --*/
+.image6{
+	background:url(../../assets/images/backgrounds/18.png);
+}
+
+/*-- image-7 --*/
+.image7{
+	background:url(../../assets/images/backgrounds/19.png);
+}
+
+/*-- image-8 --*/
+.image8{
+	background:url(../../assets/images/backgrounds/20.png);
+}
+
+/*-- image-9 --*/
+.image9{
+	background:url(../../assets/images/backgrounds/21.png);
+}
+
+/*-- image-10 --*/
+.image10{
+	background:url(../../assets/images/backgrounds/22.png);
+}
+
+.full-width .container{  
+    max-width:inherit !important;
+	width:95% !important;	
+	transition:all 0.5s ease;
+}
+.switch_section span {
+    font-size: 15px;
+    font-weight: 800;
+}
+.unbox {  
+   margin:0; 
+}
+
+.switch_section li{
+    width:100%;
+    height:30px;
+}
+.switch_section {
+    width: 100%;
+    height: auto;
+    list-style: none;
+    font-size: 1.1em;
+    margin: 0 auto;
+    padding: 19px;
+}
+
+/* //////////////////  switch-1  //////////////// */
+.onoffswitch {
+    position: relative;
+    width: 30px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+    
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 15px;
+    padding: 0;
+    line-height: 16px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch-label:before {
+    content: "";
+	height: 16px;
+    display: block;
+	width: 17px; 
+	margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 13px;
+    border: 1px solid #CCCCCC; border-radius: 15px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+}
+
+/* //////////////////  switch-2  //////////////// */
+.onoffswitch2 {
+    position: relative;
+    width: 30px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+    
+}
+.onoffswitch2-checkbox {
+    display: none;
+}
+.onoffswitch2-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 15px;
+    padding: 0;
+    line-height: 16px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch2-label:before {
+    content: "";
+	height: 16px;
+    display: block;
+	width: 17px; 
+	margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 13px;
+    border: 1px solid #CCCCCC; border-radius: 15px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch2-checkbox:checked + .onoffswitch2-label {
+    background-color: #49E845;
+}
+.onoffswitch2-checkbox:checked + .onoffswitch-label2, .onoffswitch2-checkbox:checked + .onoffswitch2-label:before {
+   border-color: #49E845;
+}
+.onoffswitch2-checkbox:checked + .onoffswitch2-label:before {
+    right: 0px; 
+}
+
+/* //////////////////  switch-3  //////////////// */
+.onoffswitch3 {
+    position: relative;
+    width: 30px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+    
+}
+.onoffswitch3-checkbox {
+    display: none;
+}
+.onoffswitch3-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 15px;
+    padding: 0;
+    line-height: 16px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch3-label:before {
+    content: "";
+	height: 16px;
+    display: block;
+	width: 17px; 
+	margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 13px;
+    border: 1px solid #CCCCCC; border-radius: 15px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch3-checkbox:checked + .onoffswitch3-label {
+    background-color: #49E845;
+}
+.onoffswitch3-checkbox:checked + .onoffswitch-label3, .onoffswitch3-checkbox:checked + .onoffswitch3-label:before {
+   border-color: #49E845;
+}
+.onoffswitch3-checkbox:checked + .onoffswitch3-label:before {
+    right: 0px; 
+}
+.light-color .card{
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.2);
+    background-clip: border-box;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2);
+}
+.light-color .horizontalMenu{
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.light-color .header .form-inline .form-control {
+    border-color: rgba(255,255,255,0.1);
+	background: rgba(255,255,255,0.2);
+}
+.light-color .footer{
+	background: rgba(255,255,255,0.2);
+	border-top: 1px solid rgba(225, 225, 225, 0.2);
+}
+.light-color .card:hover {
+	box-shadow:0 16px 26px 0 rgb(0,0,0,0.09), 0 3px 6px 0 rgb(0,0,0,0.09);
+}
+.light-color .socailicons i {
+    font-size: 126px;
+    text-align: right;
+    position: absolute;
+    top: -21px;
+    right: -29px;
+    overflow: hidden;
+    padding: 12px;
+    border-radius: 0 0 0 34%;
+    outline: none;
+    color: rgb(0, 0, 0,0.2);
+    text-shadow: none;
+    z-index: 0;
+}
+.light-color .wrap-login100 {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.2);
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 137px 130px 137px 95px;
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.06);
+}
+@media only screen and (max-width: 991px){
+	.light-color .page-header {
+		background: rgba(255,255,255,0.2);
+		border-radius: 3px;
+		padding: 15px;
+	}
+}
+.light-color .countdown-timer-wrapper .timer .timer-wrapper .time {
+	background:linear-gradient(to bottom right ,rgb(255,255,255,0.2),rgb(255,255,255,0.2)); 
+	border:1px solid rgba(255,255,255,0.1);
+}
+ .light-color .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel {
+    background: rgba(255,255,255, 0.2);
+}
+.light-color  .cbp_tmtimeline>li .cbp_tmlabel {
+    background: rgba(255,255,255, 0.2);
+}
+ .light-color .cal1 .clndr .clndr-table tr .day.event, .cal1 .clndr .clndr-table tr .day.my-event {
+    background: rgba(0, 0, 0, 0.3);
+}
+.light-color .richText .richText-toolbar {
+    background: rgba(0,0,0,0.3);
+}
+ .light-color .note-popover .popover-content, .card-header.note-toolbar {
+    background: rgba(0,0,0,0.3);
+}
+.light-color .example-bg {
+    background: rgba(0,0,0, 0.1);
+}
+.light-color .horizontal-main2 .horizontalMenu>.horizontalMenu-list>li>a.active {
+    color: rgba(255, 255, 255);
+    background: rgba(0,0,0,0.3);
+}
+.light-color .productdec {
+    background: rgba(0,0,0,0.3);
+}
+.light-color .panel.price {
+    background: rgba(255, 255, 255,0.2);
+}
+.light-color .fc-bgevent-skeleton .fc-bgevent {
+    background-color: rgba(255,255,255,0.4) !important;
+}
+.light-color .jumbotron {
+    background-color: rgba(0,0,0,0.3);
+}
+.light-color .bg-gray {
+    background: #75838a !important;
+}
+.light-color .header .form-inline .form-control{
+	background:rgba(255,255,255,0.2);
+	border:1px solid rgba(255,255,255,0.2);
+}
+.light-color .demo-icon.bg_dark{
+	background-color:#fff;
+}
+.light-color .demo-icon i{
+	color:#000;
+}
+.light-color .access-container{
+	background:rgba(255,255,255,0.2);
+	border:1px solid rgba(255,255,255,0.2);
+}
+
+/*skins */
+.switcher-pills label{
+	margin-bottom:0;
+}
+.switcher-pills .selectgroup-button{
+	border-radius:3px !important;
+	padding:0.1rem 1rem 0.1rem  !important;
+	font-size:0.7rem !important;
+	color:#031938 !important;
+}

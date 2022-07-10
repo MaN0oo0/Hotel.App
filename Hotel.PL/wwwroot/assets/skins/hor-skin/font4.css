@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+body{
+	font-family: 'Lato', sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Lato', sans-serif ;
+}
+.font-weight-semibold {
+    font-weight: 700 !important;
+}
+.horizontalMenu>.horizontalMenu-list>li>a {
+    font-weight: 600;
+}
+.horizontalMenu>.horizontalMenu-list>li>a.active {
+    font-weight: 600;
+}
+.header-brand-img.dark-version{
+	display:none;
+}

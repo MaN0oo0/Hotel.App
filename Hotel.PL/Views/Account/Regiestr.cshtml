@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewData["Title"] = "Regiestr";
+    Layout = "~/Views/Layout/LoginLayout.cshtml";
+}
+
+
+
+@model RegisterVM
+<img src="../assets/images/brand/logo.png" class="header-brand-img mobile-view mb-4" alt="Aronox logo">
+<img src="../assets/images/brand/logo-dark.png" class="header-brand-img mobile dark-view mb-4" alt="Aronox logo">
+<div class="col-xl-7 col-lg-6 col-md-12">
+    <img src="../assets/images/svgs/reg.svg" class="construction-img mb-7 h-480  mt-5 mt-xl-0" alt="">
+</div>
+<div class="col-xl-5  col-lg-6 col-md-12 ">
+    <div class="col-lg-11">
+        <img src="../assets/images/brand/logo.png" class="header-brand-img light-view mb-4" alt="Aronox logo">
+        <img src="../assets/images/brand/logo-dark.png" class="header-brand-img dark-view mb-4" alt="Aronox logo">
+        <div class="wrapper wrapper2">
+            <form class="card-body" tabindex="500" asp-controller="Account" asp-action="Regiestr" method="post">
+                <div class="m-2" asp-validation-summary="All"></div>
+                <h2 class="mb-6 font-weight-semibold">Register</h2>
+                <div class="input-group mb-3">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" asp-for="UserName">
+                </div>
+                <span asp-validation-for="UserName"></span>
+                <div class="input-group mb-3">
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                    <input type="text" class="form-control" placeholder="Emailid" asp-for="Email">
+                </div>
+                <span asp-validation-for="Email"></span>
+                <div class="input-group mb-4">
+                    <span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" asp-for="Password">
+                </div>
+                <span asp-validation-for="Password"></span>
+                <div class="input-group mb-4">
+                    <span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
+                    <input type="password" class="form-control" placeholder="ConfirmPassword" asp-for="ConfirmPassword">
+                </div>
+                <div class="submit">
+                    <div class="input-group ">
+
+                        @using (Html.BeginForm())
+                        {
+                            <div  class="d-flex flex-column align-items-center m-3">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    @Html.CheckBoxFor(x => x.isAgree)
+
+                                    &nbsp; Agree  &nbsp;Terms &nbsp;    <a asp-controller="Account" asp-action="Terms" class="text-danger">  and Conditions</a>
+                                </div>
+                                <br />
+                                <div>
+                                    @Html.ValidationMessageFor(x => x.isAgree)
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+
+
+                        }
+                    </div>
+
+                    @*   <span asp-validation-for="isAgree" class="font-weight-bold text-red"></span>*@
+
+
+                </div>
+                <p class=" mb-0">Already have account?<a asp-controller="Account" asp-action="Login" class="text-primary ml-1">Sign In</a></p>
+
+            </form>
+            <div class="card-body social-icons border-top">
+                <a class="btn  btn-social btn-fb mr-2"><i class="fa fa-facebook"></i> </a>
+                <a class="btn  btn-social btn-googleplus mr-2"><i class="fa fa-google-plus"></i></a>
+                <a class="btn  btn-social btn-twitter-transparant  "><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+@section valid{
+    <script>
+        // extend jquery range validator to work for required checkboxes
+        var defaultRangeValidator = $.validator.methods.range;
+        $.validator.methods.range = function (value, element, param) {
+            if (element.type === 'checkbox') {
+                // if it's a checkbox return true if it is checked
+                return element.checked;
+            } else {
+                // otherwise run the default validation function
+                return defaultRangeValidator.call(this, value, element, param);
+            }
+        }
+    </script>
+}

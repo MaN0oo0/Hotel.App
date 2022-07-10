@@ -1,9 +1,11 @@
 ﻿
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+
+
+using Microsoft.AspNetCore.Authorization;
 
 namespace Hotel.PL.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
        

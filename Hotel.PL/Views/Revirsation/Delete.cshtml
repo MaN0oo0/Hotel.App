@@ -2,6 +2,7 @@
 @model ReservationsVM
 @{
     ViewData["Title"] = "Delete";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
 }
   <h2>Are you sure to delete Room : @Model.RoomId  </h2>
 <form asp-controller="Revirsation" asp-action="Delete" class="form-group">

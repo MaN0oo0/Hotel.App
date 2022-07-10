@@ -1,7 +1,12 @@
+
+
 using Hotel.BL.Interface;
 using Hotel.BL.Mapper;
 using Hotel.BL.Repos;
 using Hotel.DAL.database;
+using Hotel.DAL.Extend;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,7 +30,34 @@ builder.Services.AddScoped<IRooms, RoomsRep>();
 builder.Services.AddScoped<ICleaners, CleanersRep>();
 builder.Services.AddScoped<IRevirsations, RevirsationRep>();
 
+//\/\Auth. Config.
+//===================
 
+//Service Config. ==>
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+.AddCookie(CookieAuthenticationDefaults.AuthenticationScheme,
+    options =>
+    {
+        options.LoginPath = new PathString("/Registration/Login");
+        options.AccessDeniedPath = new PathString("/Registration/Login");
+    });
+
+
+builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddEntityFrameworkStores<ApplicationContext>()
+                .AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>(TokenOptions.DefaultProvider);
+
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+{
+    // Default Password settings.
+    options.User.RequireUniqueEmail = false;
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 0;
+}).AddEntityFrameworkStores<ApplicationContext>();
 
 
 var app = builder.Build();
@@ -42,7 +74,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

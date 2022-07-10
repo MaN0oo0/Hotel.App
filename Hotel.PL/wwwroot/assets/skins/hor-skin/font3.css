@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+body{
+	font-family: 'Open Sans', sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Open Sans', sans-serif ;
+}
+h1, h2, h3{
+	font-size: 1.65rem;
+}
+.font-weight-semibold {
+    font-weight: 600 !important;
+}
+.horizontalMenu>.horizontalMenu-list>li>a {
+    font-weight: 600;
+}
+.horizontalMenu>.horizontalMenu-list>li>a.active {
+    font-weight: 600;
+}
+.header-brand-img.dark-version{
+	display:none;
+}

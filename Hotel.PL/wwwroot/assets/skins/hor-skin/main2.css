@@ -1,0 +1,14 @@
+
+body{
+	background: #fff;
+}
+.card{
+	border: 1px solid rgba(67, 87, 133, .2);
+	box-shadow:none  !important;
+}
+.app-sidebar {
+	box-shadow:none !important;
+}
+.header-brand-img.dark-version{
+	display:none;
+}

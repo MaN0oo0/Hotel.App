@@ -1,8 +1,4 @@
-﻿using AutoMapper;
-using Hotel.BL.Interface;
-using Hotel.BL.Models;
-using Hotel.DAL.Entity;
-using Microsoft.AspNetCore.Mvc;
+﻿
 
 namespace Hotel.PL.Controllers
 {

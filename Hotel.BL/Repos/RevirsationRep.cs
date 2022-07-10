@@ -1,13 +1,4 @@
-﻿using Hotel.BL.Interface;
-using Hotel.DAL.database;
-using Hotel.DAL.Entity;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Hotel.BL.Repos
 {
@@ -71,5 +62,7 @@ namespace Hotel.BL.Repos
             db.Entry(obj).State = EntityState.Modified;
             await db.SaveChangesAsync();
         }
+
+      
     }
 }

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+@model ApplicationUser
+
+<h2>Details  : @Model.UserName  </h2>
+<form asp-controller="Users" asp-action="Details" class="form-group">
+
+
+
+
+
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ConcurrencyStamp" />
+    <input type="hidden" asp-for="SecurityStamp" />
+
+
+
+
+
+    <label asp-for="UserName">Name</label>
+    <input type="text" class="form-control" asp-for="UserName" readonly />
+    <br />
+
+    <label asp-for="Email">Email</label>
+    <input type="text" class="form-control" asp-for="Email" readonly />
+    <br />
+
+    <center>
+
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-controller="Users" asp-action="Update" class="btn btn-warning" asp-route-id="@Model.Id">Update</a>
+
+        <a asp-action="index" asp-controller="Users" class="btn btn-primary">Return</a>
+
+    </center>
+</form>
+

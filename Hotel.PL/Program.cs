@@ -38,12 +38,13 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme,
     options =>
     {
-        options.LoginPath = new PathString("/Registration/Login");
-        options.AccessDeniedPath = new PathString("/Registration/Login");
+        options.LoginPath = new PathString("/Account/Login");
+        options.AccessDeniedPath = new PathString("/Account/Error");
     });
 
 
 builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationContext>()
                 .AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>(TokenOptions.DefaultProvider);
 

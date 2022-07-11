@@ -8,5 +8,5 @@ global using Hotel.DAL.Entity;
 global using Microsoft.AspNetCore.Mvc.Rendering;
 global using Microsoft.AspNetCore.Identity;
 global using Hotel.DAL.Extend;
-
+global using Microsoft.AspNetCore.Authorization;
 

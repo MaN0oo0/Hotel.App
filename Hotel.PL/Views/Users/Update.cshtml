@@ -1,0 +1,50 @@
+﻿@model ApplicationUser
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+
+
+<h1>update @Model.UserName </h1>
+<form asp-controller="Users" asp-action="Update" class="form-group">
+
+
+
+
+
+    <div asp-validation-summary="All" class="text-danger font-bold"></div>
+   
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ConcurrencyStamp" />
+    <input type="hidden" asp-for="SecurityStamp" />
+    <label asp-for="UserName"> Name</label>
+    <input type="text" class="form-control" asp-for="UserName" />
+    <span asp-validation-for="UserName" class="text-danger font-bold"></span>
+    <br />
+
+
+    <label asp-for="Email">Email</label>
+    <input type="text" class="form-control" asp-for="Email" />
+    <span asp-validation-for="Email" class="text-danger font-bold"></span>
+    <br />
+
+
+
+
+
+
+
+    <center>
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <button type="reset" class="btn btn-danger">Cancel</button>
+        <a asp-action="index" asp-controller="Users" class="btn btn-primary">Return</a>
+
+    </center>
+</form>
+
+@section Valdiation{
+    <script src="~/jquery-validation/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

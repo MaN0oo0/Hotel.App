@@ -11,3 +11,4 @@ global using Hotel.DAL.database;
 global using System.Linq.Expressions;
 global using AutoMapper;
 global using System.Collections.Generic;
+

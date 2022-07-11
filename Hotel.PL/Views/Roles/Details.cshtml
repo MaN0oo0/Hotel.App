@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+@model IdentityRole
+<h2>Details  : @Model.Name  </h2>
+<form asp-controller="Roles" asp-action="Details" class="form-group">
+
+
+
+
+
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ConcurrencyStamp" />
+
+
+
+
+
+    <label asp-for="Name">Name</label>
+    <input type="text" class="form-control" asp-for="Name" readonly />
+    <br />
+
+
+    <center>
+
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-controller="Roles" asp-action="Update" class="btn btn-warning" asp-route-id="@Model.Id">Update</a>
+
+        <a asp-action="index" asp-controller="Roles" class="btn btn-primary">Return</a>
+
+    </center>
+</form>
+

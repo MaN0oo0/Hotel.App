@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="~/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/all.min.css">
     <link rel="stylesheet" href="~/css/Boundi.css">
+    @RenderSection("Sty", required: false)
 
 
     @*<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,9 +39,16 @@
                     <li class="nav-item">
                         <a class="nav-link p-lg-3" href="#">Portfolio</a>
                     </li>
+                    @if (signInManager.IsSignedIn(User)&& User.IsInRole("Admin"))
+                    {
+
+                        <li class="nav-item">
+                            <a class="nav-link p-lg-3" asp-controller="Roles" asp-action="Index">Roles</a>
+                        </li>
                     <li class="nav-item">
-                        <a class="nav-link p-lg-3"asp-controller="Users" asp-action="index">Users</a>
+                        <a class="nav-link p-lg-3" asp-controller="Users" asp-action="index">Users</a>
                     </li>
+                    }
                     <li class="nav-item">
                         <a class="nav-link p-lg-3" href="#">Contact</a>
                     </li>
@@ -163,7 +171,8 @@
     </div>
     <!-- Footer -->
     @RenderSection("Valdiation", required: false)
-
+    @RenderSection("va", required: false)
+  
     <script src="~/js/bootstrap.bundle.min.js"></script>
 
     <script src="~/js/all.min.js"></script>

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "CreateRole";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+@model IdentityRole
+<h1>Welcome To Customer </h1>
+<form asp-controller="Roles" asp-action="CreateRole" class="form-group" method="post">
+
+
+    <div asp-validation-summary="All" class="text-danger font-bold"></div>
+    <label asp-for="Name">Role Name</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger font-bold"></span>
+    <br />
+
+
+
+    <center>
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <button type="reset" class="btn btn-danger">Cancel</button>
+        <a asp-action="index" asp-controller="Roles" class="btn btn-primary">Return</a>
+
+    </center>
+</form>
+
+@section Valdiation{
+    <script src="~/jquery-validation/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

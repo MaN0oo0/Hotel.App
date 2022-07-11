@@ -68,11 +68,11 @@ namespace Hotel.PL.Controllers
            
         
        if (model.Email!=null)
-            {
+       {
                 var userEmail = await userManager.FindByEmailAsync(model.Email);
                 result = await signInManager.PasswordSignInAsync(userEmail, model.Password, model.RemmberMe, false);
                
-            }
+       }
            
     
             if (result.Succeeded)
@@ -94,6 +94,7 @@ namespace Hotel.PL.Controllers
             return RedirectToAction("Login");
         }
 
+        
         #endregion
 
         #region Terms
@@ -190,7 +191,13 @@ namespace Hotel.PL.Controllers
 
         #endregion
 
-     
+        #region Access
+
+        public IActionResult Error()
+        {
+            return View();
+        }
+        #endregion
 
     }
 }

@@ -1,11 +1,11 @@
 ﻿
 
 
-using Microsoft.AspNetCore.Authorization;
+
 
 namespace Hotel.PL.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Hr,Admin")]
     public class HomeController : Controller
     {
        

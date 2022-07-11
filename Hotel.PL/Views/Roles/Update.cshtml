@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+@model IdentityRole
+<h1>update @Model.Name </h1>
+<form asp-controller="Roles" asp-action="Update" class="form-group">
+
+
+
+
+
+    <div asp-validation-summary="All" class="text-danger font-bold"></div>
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ConcurrencyStamp" />
+
+    <label asp-for="Name"> Name</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger font-bold"></span>
+    <br />
+
+
+
+
+
+
+    <center>
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <button type="reset" class="btn btn-danger">Cancel</button>
+        <a asp-action="index" asp-controller="Roles" class="btn btn-primary">Return</a>
+
+    </center>
+</form>
+
+<a class="btn btn-primary" asp-action="AddOrRemoveUsers" asp-controller="Roles" asp-route-RoleId="@Model.Id"> Add Or Remove Users</a>
+
+@section Valdiation{
+    <script src="~/jquery-validation/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

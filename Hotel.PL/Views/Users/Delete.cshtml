@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+@model ApplicationUser
+<h2>Are you sure to delete Delete : @Model.UserName  </h2>
+<form asp-controller="Users" asp-action="Delete" class="form-group">
+
+
+
+
+
+   
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ConcurrencyStamp" />
+    <input type="hidden" asp-for="SecurityStamp" />
+
+
+    <label asp-for="UserName">Name</label>
+    <input type="text" class="form-control" asp-for="UserName" readonly />
+    <br />
+
+    <label asp-for="Email">Email</label>
+    <input type="text" class="form-control" asp-for="Email" readonly />
+    <br />
+
+  
+
+
+   
+
+
+
+    <center>
+
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <button asp-action="Update" asp-controller="Users" class="btn btn-warning">Update</button>
+        <a asp-action="index" asp-controller="Users" class="btn btn-primary">Return</a>
+
+    </center>
+</form>
+

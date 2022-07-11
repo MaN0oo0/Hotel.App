@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "AddOrRemoveUsers";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+    var RoleId = ViewBag.roleId;
+}
+@model List<UserInRoleVM>
+<style>
+    input{
+        border:none !important;
+    }
+</style>
+<form method="post" class="form-group">
+
+    <div class="card-header">
+        <h2>Add Or Remove User In Role</h2>
+    </div>
+
+    <ul class="list-group">
+        @for (int i = 0; i < Model.Count; i++)
+        {
+
+            <li class="list-group-item">
+
+
+                <input asp-for="@Model[i].IsSelected" type="checkbox" class="filled-in">
+
+
+          
+                <label asp-for="@Model[i].IsSelected">@Model[i].UserName</label>
+            </li>
+
+            <li class="list-group-item">
+
+
+                <input type="hidden" asp-for="@Model[i].UserId" />
+
+            </li>
+            <li class="list-group-item">
+                <input type="hidden" asp-for="@Model[i].UserName" />
+            </li class="list-group-item">
+
+        }
+    </ul>
+    <div class="card-footer">
+        <input type="submit" value="Edit" class="btn btn-primary" />
+    </div>
+
+
+</form>
+
+<a asp-controller="Roles" asp-action="Update" asp-route-id="@RoleId">Cancle</a>

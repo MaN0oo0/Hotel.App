@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Layout/MainLayout.cshtml";
+}
+
+@model IdentityRole
+<h2>Are you sure to delete Delete : @Model.Name  </h2>
+<form asp-controller="Roles" asp-action="Delete" class="form-group">
+
+
+
+
+
+
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ConcurrencyStamp" />
+
+
+
+    <label asp-for="Name">Name</label>
+    <input type="text" class="form-control" asp-for="Name" readonly />
+    <br />
+
+   
+
+
+
+
+
+
+
+    <center>
+
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <button asp-action="Update" asp-controller="Roles" class="btn btn-warning">Update</button>
+        <a asp-action="index" asp-controller="Roles" class="btn btn-primary">Return</a>
+
+    </center>
+</form>
+

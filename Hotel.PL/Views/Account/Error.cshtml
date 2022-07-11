@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Error";
+    Layout = "~/Views/Layout/LoginLayout.cshtml";
+}
+
+<div class="col-xl-6 col-lg-6 col-md-12">
+    <img src="../assets/images/svgs/not-found.svg" class="construction-img" alt="">
+</div>
+<div class="col-xl-6  col-lg-6 col-md-12 ">
+    <div class="display-1 text-primary text-primary-gradient mb-3">404</div>
+    <h1 class="h2  mb-3">Page Not Found</h1>
+    <p class="h4 font-weight-normal mb-6 leading-normal ">Oops!!!! you tried to access a page which is not available. go back to Home</p>
+    <a class="btn btn-primary-gradient" asp-action="Login" asp-controller="Account">
+        Back To Home
+    </a>
+</div>
